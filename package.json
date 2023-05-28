@@ -1,0 +1,35 @@
+{
+  "name": "wetube",
+  "version": "1.0.0",
+  "description": "the best way to watch videos",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "(https://github.com/HEEYA30/wetube_2023)"
+  },
+  "scripts": {
+    "start": "node build/init.js",
+    "build": "npm run build:server && npm run build:assets",
+    "build:server": "babel src -d build ",
+    "build:assets": "webpack --mode=production",
+    "dev:server": "nodemon",
+    "dev:assets": "webpack --mode=development -w"
+  },
+  "author": "Heeya",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongoose": "^7.2.0",
+    "morgan": "^1.10.0",
+    "pug": "^3.0.2"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.21.5",
+    "@babel/core": "^7.22.1",
+    "@babel/node": "^7.20.7",
+    "@babel/preset-env": "^7.21.5",
+    "nodemon": "^2.0.22",
+    "webpack": "^5.84.1",
+    "webpack-cli": "^5.1.1"
+  }
+}

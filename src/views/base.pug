@@ -1,0 +1,28 @@
+doctype html
+html(lang="ko")
+    head
+        title #{pageTitle} | Wetube 
+        link(rel="stylesheet" href="https://unpkg.com/mvp.css@1.12/mvp.css")
+        link(rel="stylesheet", href="/static/css/styles.css") 
+    body  
+        header 
+            //- if fakeUser.loggedIn
+            //-     small hello #{fakeUser.username}
+            //- nav     
+            //-     ul 
+            //-         if fakeUser.loggedIn
+            //-             li  
+            //-                 a(href="/Logout") LogOut
+            //-         else 
+            //-             li  
+            //-                 a(href="/Login") Login
+            h1=pageTitle
+            nav 
+                ul  
+                    li  
+                        a(href="/video/upload") Upload Video
+        main
+            block content
+        //- h1 Base!
+        include partials/footer
+        block scripts
